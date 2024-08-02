@@ -14,5 +14,6 @@
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry kind="lib" path="C:/Users/HP PRO.DESKTOP-HNHL93G.000/Downloads/postgresql-42.7.3.jar"/>
+	<classpathentry kind="lib" path="J:/apache-log4j-2.23.1-bin/log4j-1.2-api-2.23.1.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

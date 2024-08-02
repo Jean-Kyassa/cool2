@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. --><project basedir="." default="compile" name="jean">
+    <property environment="env"/>
+    <property name="ECLIPSE_HOME" value="../../../../eclipse/java-2024-06/eclipse/"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="21"/>
+    <property name="source" value="21"/>
+    <path id="Server Runtime [Apache Tomcat v10.1].libraryclasspath">
+        <pathelement location="../../../../../../Program Files/Apache Software Foundation/Tomcat 10.1/lib/annotations-api.jar"/>
+        <pathelement location="../../../../../../Program Files/Apache Software Foundation/Tomcat 10.1/lib/catalina-ant.jar"/>
+        <pathelement location="../../../../../../Program Files/Apache Software Foundation/Tomcat 10.1/lib/catalina-ha.jar"/>
+        <pathelement location="../../../../../../Program Files/Apache Software Foundation/Tomcat 10.1/lib/catalina-ssi.jar"/>
+        <pathelement location="../../../../../../Program Files/Apache Software Foundation/Tomcat 10.1/lib/catalina-storeconfig.jar"/>
+        <pathelement location="../../../../../../Program Files/Apache Software Foundation/Tomcat 10.1/lib/catalina-tribes.jar"/>
+        <pathelement location="../../../../../../Program Files/Apache Software Foundation/Tomcat 10.1/lib/catalina.jar"/>
+        <pathelement location="../../../../../../Program Files/Apache Software Foundation/Tomcat 10.1/lib/ecj-4.27.jar"/>
+        <pathelement location="../../../../../../Program Files/Apache Software Foundation/Tomcat 10.1/lib/el-api.jar"/>
+        <pathelement location="../../../../../../Program Files/Apache Software Foundation/Tomcat 10.1/lib/jakartaee-migration-1.0.8-shaded.jar"/>
+        <pathelement location="../../../../../../Program Files/Apache Software Foundation/Tomcat 10.1/lib/jasper-el.jar"/>
+        <pathelement location="../../../../../../Program Files/Apache Software Foundation/Tomcat 10.1/lib/jasper.jar"/>
+        <pathelement location="../../../../../../Program Files/Apache Software Foundation/Tomcat 10.1/lib/jaspic-api.jar"/>
+        <pathelement location="../../../../../../Program Files/Apache Software Foundation/Tomcat 10.1/lib/jsp-api.jar"/>
+        <pathelement location="../../../../../../Program Files/Apache Software Foundation/Tomcat 10.1/lib/servlet-api.jar"/>
+        <pathelement location="../../../../../../Program Files/Apache Software Foundation/Tomcat 10.1/lib/tomcat-api.jar"/>
+        <pathelement location="../../../../../../Program Files/Apache Software Foundation/Tomcat 10.1/lib/tomcat-coyote.jar"/>
+        <pathelement location="../../../../../../Program Files/Apache Software Foundation/Tomcat 10.1/lib/tomcat-dbcp.jar"/>
+        <pathelement location="../../../../../../Program Files/Apache Software Foundation/Tomcat 10.1/lib/tomcat-i18n-cs.jar"/>
+        <pathelement location="../../../../../../Program Files/Apache Software Foundation/Tomcat 10.1/lib/tomcat-i18n-de.jar"/>
+        <pathelement location="../../../../../../Program Files/Apache Software Foundation/Tomcat 10.1/lib/tomcat-i18n-es.jar"/>
+        <pathelement location="../../../../../../Program Files/Apache Software Foundation/Tomcat 10.1/lib/tomcat-i18n-fr.jar"/>
+        <pathelement location="../../../../../../Program Files/Apache Software Foundation/Tomcat 10.1/lib/tomcat-i18n-ja.jar"/>
+        <pathelement location="../../../../../../Program Files/Apache Software Foundation/Tomcat 10.1/lib/tomcat-i18n-ko.jar"/>
+        <pathelement location="../../../../../../Program Files/Apache Software Foundation/Tomcat 10.1/lib/tomcat-i18n-pt-BR.jar"/>
+        <pathelement location="../../../../../../Program Files/Apache Software Foundation/Tomcat 10.1/lib/tomcat-i18n-ru.jar"/>
+        <pathelement location="../../../../../../Program Files/Apache Software Foundation/Tomcat 10.1/lib/tomcat-i18n-zh-CN.jar"/>
+        <pathelement location="../../../../../../Program Files/Apache Software Foundation/Tomcat 10.1/lib/tomcat-jdbc.jar"/>
+        <pathelement location="../../../../../../Program Files/Apache Software Foundation/Tomcat 10.1/lib/tomcat-jni.jar"/>
+        <pathelement location="../../../../../../Program Files/Apache Software Foundation/Tomcat 10.1/lib/tomcat-util-scan.jar"/>
+        <pathelement location="../../../../../../Program Files/Apache Software Foundation/Tomcat 10.1/lib/tomcat-util.jar"/>
+        <pathelement location="../../../../../../Program Files/Apache Software Foundation/Tomcat 10.1/lib/tomcat-websocket.jar"/>
+        <pathelement location="../../../../../../Program Files/Apache Software Foundation/Tomcat 10.1/lib/websocket-api.jar"/>
+        <pathelement location="../../../../../../Program Files/Apache Software Foundation/Tomcat 10.1/lib/websocket-client-api.jar"/>
+    </path>
+    <path id="Web App Libraries.libraryclasspath"/>
+    <path id="EAR Libraries.libraryclasspath"/>
+    <path id="jean.classpath">
+        <pathelement location="build/classes"/>
+        <path refid="Server Runtime [Apache Tomcat v10.1].libraryclasspath"/>
+        <path refid="Web App Libraries.libraryclasspath"/>
+        <path refid="EAR Libraries.libraryclasspath"/>
+        <pathelement location="../../../../Downloads/postgresql-42.7.3.jar"/>
+    	<pathelement location="../../../../../../Program Files/Apache Software Foundation/Tomcat 10.1/lib/servlet-api.jar"/>
+    </path>
+    <path id="run.New_configuration.classpath">
+        <path refid="jean.classpath"/>
+        <path refid="Server Runtime [Apache Tomcat v10.1].libraryclasspath"/>
+        <path refid="Web App Libraries.libraryclasspath"/>
+        <path refid="EAR Libraries.libraryclasspath"/>
+        <pathelement location="../../../../Downloads/postgresql-42.7.3.jar"/>
+    </path>
+    <path id="run.New_configuration (1).classpath">
+        <path refid="jean.classpath"/>
+        <path refid="Server Runtime [Apache Tomcat v10.1].libraryclasspath"/>
+        <path refid="Web App Libraries.libraryclasspath"/>
+        <path refid="EAR Libraries.libraryclasspath"/>
+        <pathelement location="../../../../Downloads/postgresql-42.7.3.jar"/>
+    </path>
+    <target name="init">
+        <mkdir dir="build/classes"/>
+        <copy includeemptydirs="false" todir="build/classes">
+            <fileset dir="src/main/java">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="build/classes"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="build/classes" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src/main/java"/>
+            <classpath refid="jean.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target name="compile">
+         <mkdir dir="build/classes"/>
+              <javac srcdir="src/main/java" destdir="build/classes" includeantruntime="false" debug="true" debuglevel="${debuglevel}" source="${source}" target="${target}">
+              	   <classpath refid="jean.classpath"/>
+              </javac>
+    </target>
+    <target name="New_configuration">
+        <java classname="" failonerror="true" fork="yes">
+            <classpath refid="run.New_configuration.classpath"/>
+        </java>
+    </target>
+              	<target name="war" depends="compile">
+              	    <war destfile="jean.war" webxml="src/main/webapp/WEB-INF/web.xml">
+              	        <classes dir="build/classes"/>
+              	        <fileset dir="src/main/webapp"/>
+              	        <!-- Remove the following line if you don't have a lib directory -->
+              	        <!-- <lib dir="lib"/> -->
+              	    </war>
+              	</target>
+</project>
